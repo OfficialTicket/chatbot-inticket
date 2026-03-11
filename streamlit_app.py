@@ -45,7 +45,7 @@ st.markdown(
     .avatar-circle {
         width: 36px; height: 36px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #5E5CE6 0%, #BF5AF2 100%);
+        background: #e5e5ea;
         display: flex; align-items: center; justify-content: center;
         font-size: 16px; flex-shrink: 0;
     }
@@ -105,7 +105,7 @@ st.markdown(
     .mini-avatar {
         width: 24px; height: 24px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #5E5CE6 0%, #BF5AF2 100%);
+        background: #e5e5ea;
         display: flex; align-items: center; justify-content: center;
         font-size: 11px; flex-shrink: 0; margin-bottom: 2px;
     }
