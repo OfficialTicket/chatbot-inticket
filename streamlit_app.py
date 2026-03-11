@@ -220,9 +220,9 @@ st.markdown(
 st.markdown(
     """
     <div class="status-bar">
-        <div class="avatar-circle">🤖</div>
+        <div class="avatar-circle">🐶</div>
         <div class="contact-info">
-            <div class="contact-name">GPT Assistant</div>
+            <div class="contact-name">InTicket</div>
             <div class="contact-sub">iMessage · Active Now</div>
         </div>
     </div>
@@ -258,7 +258,7 @@ def render_bubble(role: str, content: str):
         st.markdown(
             f"""
             <div class="msg-row assistant">
-                <div class="mini-avatar">🤖</div>
+                <div class="mini-avatar">🐶</div>
                 <div class="bubble">{content}</div>
             </div>
             """,
@@ -283,7 +283,7 @@ if prompt := st.chat_input("문자 메시지"):
     typing_placeholder.markdown(
         """
         <div class="typing-indicator">
-            <div class="mini-avatar">🤖</div>
+            <div class="mini-avatar">🐶</div>
             <div class="typing-dots">
                 <div class="dot"></div>
                 <div class="dot"></div>
