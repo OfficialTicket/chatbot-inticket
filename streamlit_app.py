@@ -14,8 +14,8 @@ st.markdown(
     /* ── Global reset ── */
     html, body, [class*="css"] {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-        background-color: #000000 !important;
-        color: #ffffff;
+        background-color: #f2f2f7 !important;
+        color: #1c1c1e;
     }
 
     /* ── Hide Streamlit chrome ── */
@@ -31,15 +31,17 @@ st.markdown(
         position: sticky;
         top: 0;
         z-index: 100;
-        background: rgba(0,0,0,0.85);
+        background: rgba(242,242,247,0.9);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border-bottom: 0.5px solid rgba(255,255,255,0.15);
+        border-bottom: 0.5px solid rgba(0,0,0,0.1);
         padding: 12px 16px 10px;
         display: flex;
         align-items: center;
         gap: 12px;
     }
+    .contact-name  { font-size: 15px; font-weight: 600; color: #1c1c1e; line-height: 1.2; }
+    .contact-sub   { font-size: 11px; color: #8e8e93; margin-top: 1px; }
     .avatar-circle {
         width: 36px; height: 36px;
         border-radius: 50%;
@@ -48,8 +50,6 @@ st.markdown(
         font-size: 16px; flex-shrink: 0;
     }
     .contact-info { flex: 1; }
-    .contact-name  { font-size: 15px; font-weight: 600; color: #ffffff; line-height: 1.2; }
-    .contact-sub   { font-size: 11px; color: #8e8e93; margin-top: 1px; }
 
     /* ── Message list area ── */
     .chat-area {
@@ -65,6 +65,7 @@ st.markdown(
         align-items: flex-end;
         gap: 6px;
         animation: fadeSlideUp 0.25s ease-out both;
+        margin-bottom: 8px;
     }
     .msg-row.user  { flex-direction: row-reverse; }
     .msg-row.assistant { flex-direction: row; }
@@ -92,12 +93,12 @@ st.markdown(
         border-bottom-right-radius: 4px;
     }
 
-    /* assistant → dark grey bubble */
+    /* assistant → light grey bubble */
     .msg-row.assistant .bubble {
-        background: #1c1c1e;
-        color: #ffffff;
+        background: #e9e9eb;
+        color: #1c1c1e;
         border-bottom-left-radius: 4px;
-        border: 0.5px solid rgba(255,255,255,0.08);
+        border: none;
     }
 
     /* ── Mini avatar for assistant ── */
@@ -113,7 +114,7 @@ st.markdown(
     .timestamp-row {
         text-align: center;
         font-size: 11px;
-        color: #636366;
+        color: #aeaeb2;
         margin: 8px 0 4px;
         font-weight: 500;
     }
@@ -143,22 +144,22 @@ st.markdown(
 
     /* ── Input bar ── */
     .stChatInputContainer, [data-testid="stChatInput"] {
-        background: #000000 !important;
-        border-top: 0.5px solid rgba(255,255,255,0.12) !important;
+        background: #f2f2f7 !important;
+        border-top: 0.5px solid rgba(0,0,0,0.1) !important;
         padding: 8px 12px 12px !important;
     }
     [data-testid="stChatInput"] textarea {
-        background: #1c1c1e !important;
-        color: #ffffff !important;
+        background: #ffffff !important;
+        color: #1c1c1e !important;
         border-radius: 20px !important;
-        border: 0.5px solid rgba(255,255,255,0.15) !important;
+        border: 0.5px solid rgba(0,0,0,0.15) !important;
         padding: 9px 16px !important;
         font-size: 15px !important;
         font-family: 'Inter', sans-serif !important;
         resize: none !important;
         box-shadow: none !important;
     }
-    [data-testid="stChatInput"] textarea::placeholder { color: #636366 !important; }
+    [data-testid="stChatInput"] textarea::placeholder { color: #aeaeb2 !important; }
     [data-testid="stChatInput"] textarea:focus {
         border-color: rgba(10,132,255,0.6) !important;
         outline: none !important;
@@ -182,30 +183,34 @@ st.markdown(
 
     /* ── API key input ── */
     [data-testid="stTextInput"] input {
-        background: #1c1c1e !important;
-        color: #ffffff !important;
-        border: 0.5px solid rgba(255,255,255,0.15) !important;
+        background: #ffffff !important;
+        color: #1c1c1e !important;
+        border: 0.5px solid rgba(0,0,0,0.15) !important;
         border-radius: 12px !important;
         font-size: 15px !important;
     }
     [data-testid="stTextInput"] label {
-        color: #8e8e93 !important;
+        color: #636366 !important;
         font-size: 13px !important;
     }
 
     /* ── Info / warning boxes ── */
     [data-testid="stAlert"] {
-        background: #1c1c1e !important;
-        border: 0.5px solid rgba(255,255,255,0.1) !important;
+        background: #ffffff !important;
+        border: 0.5px solid rgba(0,0,0,0.08) !important;
         border-radius: 12px !important;
-        color: #ebebf5 !important;
+        color: #1c1c1e !important;
         font-size: 14px !important;
     }
 
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #3a3a3c; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 2px; }
+
+    /* ── Typing dots 라이트모드 ── */
+    .typing-dots { background: #e9e9eb; }
+    .dot { background: #aeaeb2; }
     </style>
     """,
     unsafe_allow_html=True,
